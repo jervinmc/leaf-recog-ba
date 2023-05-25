@@ -77,7 +77,7 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
   String symptoms ='';
   String causal_agent ='';
   String geographical_location ='';
-  String descriptions ='';
+  String descriptions ='Citrus greening is one of the most destructive diseases of citrus. Infected trees or branches suffer heavy leaf drop followed by out-of-season flushing and flowering, with dieback occurring in severe cases.';
   String organic ='';
   String chemical ='';
   double latitude = 0.0;
@@ -111,12 +111,12 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
        name_disease = res![0]['label'].toString();
      });
  
-      final response = await http.post(Uri.parse(BASE_URL),
-        headers: {"Content-Type": "application/json"},
-        body: json.encode({"location":geographical_location,"disease":name_disease}));
-    final data = json.decode(response.body); 
-     if(name_disease == 'Sooty Mood'){
-       descriptions = 'Sooty mold is a fungal disease that grows on plants and other surfaces covered by honeydew, a sticky substance created by certain insects. Sooty molds name comes from the dark threadlike growth (mycelium) of the fungi resembling a layer of soot. Sooty mold doesnt infect plants but grows on plant parts and other surfaces where honeydew deposits accumulate.';
+    //   final response = await http.post(Uri.parse(BASE_URL),
+    //     headers: {"Content-Type": "application/json"},
+    //     body: json.encode({"location":geographical_location,"disease":name_disease}));
+    // final data = json.decode(response.body); 
+     if(name_disease == '0 Calamondin'){
+       descriptions = "also known as kalamansi, calamondin Philippine lime or Philippine lemon, is an economically important citrus hybrid predominantly cultivated in the Philippines";
        symptoms = 'The fungus colonises both upper and lower surfaces causing black, circular spots, up to 5 mm diameter';
        causal_agent = 'Sooty mold is a black thin mat usually caused by a fungus that grows on the sugary excrement (honeydew) of insects with piercing-sucking mouth parts such as whiteflies, scales, aphids, and mealybugs.';
        organic='Use formulations of neem oil, which is an organic broad spectrum compound, to ward off white flies, aphids, scales, ants and mealy bugs . Neem oil also reduces the growth of the fungal itself. Insecticidal soap or dish soap can be sprayed on affected plants.';
@@ -125,8 +125,8 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
          
        });
      }
-     else if(name_disease == 'Phytphthora'){
-       descriptions = 'Phytophthora  is a soilborne pathogen that attacks the root systems and affects the entire citrus tree. As the pathogen degrades the tree’s root system, above ground symptoms such as slowed growth, chlorotic foliage and reduced fruit size intensify. Eventually, this may result in the death of the tree.';
+     else if(name_disease == '1 Clementine'){
+       descriptions = 'Clementine trees bear delectable fruit during the holiday season, earning them the name “Christmas oranges.” Clementines are a type of mandarin, and their fruit is easy to peel, virtually seedless, juicy, and much less acidic than traditional oranges';
        symptoms = 'Phytophthora gummosis causes sap to ooze from small cracks in infected bark until the damaged bark eventually cracks and falls off, while tree leaves yellow and eventually drop. Phytophthora root rot also cause leaves to yellow and fall off. Other symptoms include destroyed feeder roots, nutrient deficiencies and water stress.';
        causal_agent = 'Phytophthora root rot in citrus is caused by the pathogenic fungi P. citrophthora and/or P. nicotianae. Below-ground symptoms are the loss of feeder roots.';
        organic ='Streptomyces griseoviridis (MycoStop) is a bacteria you can use to inoculate the soil. It’s organic approved, and listed as a control for Phytophthora.';
@@ -135,8 +135,8 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
          
        });
      }
-     else if(name_disease == 'Greasy Spot'){
-       descriptions = 'Greasy spot spores germinate on the underside of the leaves, penetrate the leaf tissue, and cause cellular swelling resulting in blister formation on the lower leaf surface. Leaf drop may occur even before full leaf symptoms develop. Defoliation decreases fruit production, and makes the tree more susceptible to cold damage and attack by other pests.';
+     else if(name_disease == '2 Dayap'){
+       descriptions = 'also known as the Key lime or acid lime is a citrus hybrid native to tropical Southeast Asia';
        symptoms = 'Yellow spots first appear on the upper leaf surface, then irregular brown blisters that become dark, slightly raised, and have a greasy appearance develop on lower, and later, upper leaf surfaces.';
        causal_agent = 'The fungus caused by greasy spot is caused by the fungus Mycosphaerella citri.';
        organic ='No biological treatment is available against Mycosphaerella citri.';
@@ -145,8 +145,8 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
          
        });
      }
-     else if(name_disease == 'Citrus Scab'){
-       descriptions = 'It starts as a small pale-orange, somewhat circular, elevated spot on the leaf. A severely infected leaf becomes so distorted, crinkled and stunted that whatever remains has very little semblance to a normal leaf';
+     else if(name_disease == '3 Lemon'){
+       descriptions = 'small tree or spreading bush of the rue family (Rutaceae) and its edible fruit';
        symptoms = 'In citrus scab, corky outgrowths begin on leaves, shoots, and fruit as rounded pustules (Figure 12). Initially, scab lesions on fruit consist of slightly raised pink to light brown pustules. As these pustules develop, they become wart-like, cracked, turn yellowish brown, and eventually dark gray.';
        causal_agent = 'Scab is caused by the fungus Elsinoe fawcettii.';
        organic ='No biological treatment is available against these fungi. Certified organic fungicides based on copper can be used  to prevent new infections and fungal spread.';
@@ -155,8 +155,8 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
          
        });
      }
-     else if(name_disease == 'Cranker'){
-       descriptions = 'Citrus canker,  is a serious disease of most citrus varieties. The disease causes necrotic lesions on leaves, stems, and fruit. Severe infestation can cause defoliation, premature fruit drop, twig dieback, general tree decline, and very bad blemishes on fruit.';
+     else if(name_disease == '4 Orange'){
+       descriptions = 'is an evergreen tree in the family Rutaceae grown for its edible fruit. The orange tree is branched with a rounded crown and possesses elliptical or oval leaves which are alternately arranged on the branches.';
        symptoms = 'The earliest symptoms on leaves appear as slightly-raised, tiny, blister-like lesions. As the lesions age, they turn tan to brown and a wate- soaked margin appears surrounded by a yellow halo';
        causal_agent = 'Citrus canker, caused by a bacterial pathogen';
        organic ='No effective biological control methods are available.';
@@ -165,7 +165,8 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
          
        });
      }
-     else if(name_disease == 'Greening'){
+     else if(name_disease == '5 Tangerine'){
+      print("OKAYYYY");
        descriptions = 'Citrus greening is one of the most destructive diseases of citrus. Infected trees or branches suffer heavy leaf drop followed by out-of-season flushing and flowering, with dieback occurring in severe cases.';
        symptoms = 'The early symptoms usually appear on one sector or branch of the tree. Symptoms are characterized by yellowing of normal-sized leaves along the veins and sometimes by the development of a blotchy-mottle';
        causal_agent = 'Citrus greening is caused by systemic phloem-inhabiting bacterium.';
@@ -361,6 +362,10 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
                   Container(
                     padding:EdgeInsets.all(10),
                     child: Text("Diagnosis: ${name_disease}"),
+                  ),
+                  Container(
+                    padding:EdgeInsets.all(10),
+                    child: Text("Description: ${descriptions}"),
                   ),
                 ],
               )
