@@ -368,7 +368,7 @@ static String BASE_URL_LONGLAT = '' + Global.url + '/longlat';
               children: [
                 Text("Hello, Welcome to Calaheatlh System!",style:TextStyle(fontSize: 30.0,fontWeight:FontWeight.bold)),
                 Padding(padding: EdgeInsets.only(top: 20)),
-                Text("To use this application, Please upload or capture an image of calamansi plant with disease in order to generate a report and determine what it is.",style:TextStyle(fontSize: 15.0))
+                Text("To use this application, Please upload or capture an image of leaf plant with disease in order to generate a report and determine what it is.",style:TextStyle(fontSize: 15.0))
               ],
             ),
                 Padding(padding: EdgeInsets.only(top: 20)),

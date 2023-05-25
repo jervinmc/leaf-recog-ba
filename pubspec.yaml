@@ -72,6 +72,7 @@ flutter:
   assets:
     - assets/images/logo.jpg
     - assets/labels.txt
+    - assets/images/logo.png 
     - assets/model_unquant.tflite
   #   - images/a_dot_ham.jpeg
 

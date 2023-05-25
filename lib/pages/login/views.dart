@@ -98,7 +98,7 @@ class _LoginState extends State<Login> {
                   padding: EdgeInsets.all(20),
                   child: Column(
                       children: <Widget>[
-                        Image.asset("assets/images/logo.jpg",height: 200,),
+                        Image.asset("assets/images/logo.png",height: 200,),
                         // Container(
                         //   padding: EdgeInsets.only(top: 20),
                         //   child: TextField(
